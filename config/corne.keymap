@@ -148,10 +148,6 @@
                         tapping-term-ms = <300>;
                                         };
                 };
-
-
-
-
         combos {
                 compatible = "zmk,combo";
                 combo-term-ms = <200>;  # Set the delay for combos to 200ms
@@ -285,12 +281,9 @@
                 combo_alt_backspace {
                 timeout-ms = <200>;  # Set the delay for combos
                 bindings = <&kp LEFT_ALT &kp BACKSPACE>;
-                key-positions = <LEFT_ALT BACKSPACE>;
+                key-positions = <1 2 2 4>;
                                 };
-
                 };
-
-
 
         keymap {
                 compatible = "zmk,keymap";
@@ -305,7 +298,7 @@
     &multi_tap_q &multi_tap_w &multi_tap_e &multi_tap_r &multi_tap_t        &multi_tap_y &multi_tap_u &multi_tap_i &multi_tap_o &multi_tap_p
     &mod_tap_a &mod_tap_s &mod_tap_d &mod_tap_f &kp G         &kp H &mod_tap_j &mod_tap_k &mod_tap_l &mod_tap_semi
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
+                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
 
                         >;
                                 };
@@ -319,7 +312,7 @@
 &kp CMD_D    &kp CMD_OPT_B    &kp CMD_Y    &kp CMD_J    &kp OPT_N2    &kp VOL_UP   &kp HOME   &kp PAGE_UP   &kp PAGE_DOWN   &kp END
 &kp CMD_T    &kp CMD_LEFT_BRACKET   &kp CMD_RIGHT_BRACKET   &kp CMD_W   &kp CMD_SHIFT_T    &kp AUDIO_MUTE    &kp UP   &kp LEFT   &kp RIGHT   &kp DOWN
 &kp CMD_R    &kp CMD_PLUS    &kp CMD_MINUS    &kp CMD_0    &kp CTRL_CMD_F    &kp VOL_DOWN    &none    &none    &none    &none
-                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
+                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
                         >;
                         }; 
 
@@ -333,7 +326,7 @@
 &kp GRAVE    &kp TILDE    &kp MINUS    &kp UNDERSCORE    &kp BACKSLASH    &kp ASTERISK    &kp N7    &kp N8    &kp N9    &kp SLASH
 &kp LEFT_BRACKET    &kp RIGHT_BRACKET    &kp LEFT_CURLY_BRACE    &kp RIGHT_CURLY_BRACE    &kp PIPE    &kp PLUS    &kp N4    &kp N5    &kp N6    &kp MINUS
 &kp APOSTROPHE    &kp DOUBLE_QUOTE    &kp EM_DASH    &kp EN_DASH    &paste_rupee    &kp PERCENT    &kp N1    &kp N2    &kp N3    &kp EQUAL
-                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
+                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
                         >;
                         };
                 };
