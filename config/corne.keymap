@@ -300,7 +300,7 @@
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-//                    | L_DT | DEL_WRD | BKSPC |   | SPC | ENT  | R_DT |
+//                    | LDT | DEL WRD | BKSPC |   | SPC | ENT  | RDT |
                         bindings = <
     &multi_tap_q &multi_tap_w &multi_tap_e &multi_tap_r &multi_tap_t        &multi_tap_y &multi_tap_u &multi_tap_i &multi_tap_o &multi_tap_p
     &mod_tap_a &mod_tap_s &mod_tap_d &mod_tap_f &kp G         &kp H &mod_tap_j &mod_tap_k &mod_tap_l &mod_tap_semi
@@ -313,22 +313,22 @@
 // -----------------------------------------------------------------------------------------
 // |  Add_BM  |  BM_Mgr  |  History  |  DLs  |  Kill_Switch  |   |  Volume Up  |  Home  |  Page Up  |  Page Down  |  End  | 
 // | New_Tab | Back | Forward | Close_Tab | Undo_Close_Tab |   | Mute | Up_Arrow |  Left_Arrow | Right_Arrow | Down_Arrow |
-// | Reload | Zoom_In | Zoom_Out | Zoom_Reset | Full Screen |   | Volume_Down |  Scroll_Up |  Scroll_Left | Scroll_Right | Scroll_Down |
-//                    | L_DT | DEL_WRD | BKSPC |   | SPC | ENT  | R_DT |
+// | Reload | Zoom_In | Zoom_Out | Zoom_Reset | Full Screen |   | Volume_Down |  None |  None | None | None |
+//                    | LDT | DEL_WRD | BKSPC |   | SPC | ENT  | RDT |
                         bindings = <
 &kp CMD_D    &kp CMD_OPT_B    &kp CMD_Y    &kp CMD_J    &kp OPT_N2    &kp VOL_UP   &kp HOME   &kp PAGE_UP   &kp PAGE_DOWN   &kp END
 &kp CMD_T    &kp CMD_LEFT_BRACKET   &kp CMD_RIGHT_BRACKET   &kp CMD_W   &kp CMD_SHIFT_T    &kp AUDIO_MUTE    &kp UP   &kp LEFT   &kp RIGHT   &kp DOWN
-&kp CMD_R    &kp CMD_PLUS    &kp CMD_MINUS    &kp CMD_0    &kp CTRL_CMD_F    &kp VOL_DOWN    &kp MS_UP    &kp MS_WH_LEFT    &kp MS_WH_RIGHT    &kp MS_DOWN
+&kp CMD_R    &kp CMD_PLUS    &kp CMD_MINUS    &kp CMD_0    &kp CTRL_CMD_F    &kp VOL_DOWN    &none    &none    &none    &none
                   &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
                         >;
-                        };
+                        }; 
 
                 layer2 {
 // -----------------------------------------------------------------------------------------
 // |  `  |  ~  |  -  |  _  |  \  |   |  *  |  7  |  8  |  9  |  /  |
 // |  [  |  ]  |  {  |  }  |  |  |   |  +  |  4  |  5  |  6  |  -  |
 // |  '  |  "  |  —  |  –  |  ₹  |   |  %  |  1  |  2  |  3  | = |
-//                    | L_DT | DEL_WRD | BKSPC |   | SPC | ENT  | R_DT |
+//                    | LDT | DEL WRD | BKSPC |   | SPC | ENT  | RDT |
                         bindings = <
 &kp GRAVE    &kp TILDE    &kp MINUS    &kp UNDERSCORE    &kp BACKSLASH    &kp ASTERISK    &kp N7    &kp N8    &kp N9    &kp SLASH
 &kp LEFT_BRACKET    &kp RIGHT_BRACKET    &kp LEFT_CURLY_BRACE    &kp RIGHT_CURLY_BRACE    &kp PIPE    &kp PLUS    &kp N4    &kp N5    &kp N6    &kp MINUS
@@ -337,4 +337,4 @@
                         >;
                         };
                 };
-};
+}; 
