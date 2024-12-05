@@ -9,48 +9,332 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        behaviors {
+                paste_rupee: paste_rupee {
+                        label = "Paste Rupee";
+                        compatible = "zmk,behavior-macro";
+                        bindings = <&macro_tap "₹">;  # Directly inserts the ₹ symbol
+                                        };
+                multi_tap_q: multi_tap_q {
+                        label = "Multi-Tap Q";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp Q>, <&kp EXCL>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_w: multi_tap_w {
+                        label = "Multi-Tap W";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp W>, <&kp AT>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_e: multi_tap_e {
+                        label = "Multi-Tap E";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp E>, <&kp HASH>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_r: multi_tap_r {
+                        label = "Multi-Tap R";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp R>, <&kp DOLLAR>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_t: multi_tap_t {
+                        label = "Multi-Tap T";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp T>, <&kp PERCENT>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_y: multi_tap_y {
+                        label = "Multi-Tap Y";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp Y>, <&kp CIRC>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_u: multi_tap_u {
+                        label = "Multi-Tap U";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp U>, <&kp AMPS>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_i: multi_tap_i {
+                        label = "Multi-Tap I";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp I>, <&kp ASTERISK>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_o: multi_tap_o {
+                        label = "Multi-Tap O";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp O>, <&kp LEFT_PAREN>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                multi_tap_p: multi_tap_p {
+                        label = "Multi-Tap P";
+                        compatible = "zmk,behavior-multi-tap";
+                        bindings = <&kp P>, <&kp RIGHT_PAREN>;
+                        max-tap-time-ms = <350>;  # Set the delay to 350ms for double tap
+                                        };
+                mod_tap_a: mod_tap_a {
+                        label = "Mod Tap A";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp A>, <&kp LEFT_SHIFT>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_s: mod_tap_s {
+                        label = "Mod Tap S";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp S>, <&kp LEFT_CTRL>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_d: mod_tap_d {
+                        label = "Mod Tap D";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp D>, <&kp LEFT_ALT>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_f: mod_tap_f {
+                        label = "Mod Tap F";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp F>, <&kp LEFT_GUI>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_j: mod_tap_j {
+                        label = "Mod Tap J";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp J>, <&kp RIGHT_GUI>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_k: mod_tap_k {
+                        label = "Mod Tap K";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp K>, <&kp RIGHT_ALT>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_l: mod_tap_l {
+                        label = "Mod Tap L";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp L>, <&kp RIGHT_CTRL>;
+                        tapping-term-ms = <300>;
+                                        };
+                mod_tap_semi: mod_tap_semi {
+                        label = "Mod Tap Semi";
+                        compatible = "zmk,behavior-mod-morph";
+                        bindings = <&kp SEMI>, <&kp RIGHT_SHIFT>;
+                        tapping-term-ms = <300>;
+                                        };
+                hold_tap_b: hold_tap_b {
+                        label = "Hold Tap B";
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&kp B>, <&mo 1>;  # Tap B, hold for Layer 1
+                        tapping-term-ms = <300>;
+                                        };
+                hold_tap_n: hold_tap_n {
+                        label = "Hold Tap N";
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&kp N>, <&mo 1>;  # Tap N, hold for Layer 1
+                        tapping-term-ms = <300>;
+                                        };
+                hold_tap_v: hold_tap_v {
+                        label = "Hold Tap V";
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&kp V>, <&mo 2>;  # Tap V, hold for Layer 2
+                        tapping-term-ms = <300>;
+                                        };
+                hold_tap_m: hold_tap_m {
+                        label = "Hold Tap M";
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&kp M>, <&mo 2>;  # Tap M, hold for Layer 2
+                        tapping-term-ms = <300>;
+                                        };
+                };
+
+
+
+
+        combos {
+                compatible = "zmk,combo";
+                combo-term-ms = <200>;  # Set the delay for combos to 200ms
+                // a + s = Cmd + X (Cut)
+                combo_cut {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp X>;
+                        key-positions = <A S>;
+                                };
+                // d + f = Cmd + C (Copy)
+                combo_copy {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp C>;
+                        key-positions = <D F>;
+                                };
+                // g + h = Cmd + Space (Alfred)
+                combo_alfred {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp SPACE>;
+                        key-positions = <G H>;
+                                };
+                // j + k = Cmd + V (Paste)
+                combo_paste {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp V>;
+                        key-positions = <J K>;
+                                };
+                // l + ; = Cmd + Shift + Option + V (Pure Paste)
+                combo_pure_paste {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp LEFT_ALT &kp V>;
+                        key-positions = <L SEMI>;
+                                };
+                // a + d = Ctrl + Shift + Tab (Switch to Left Tab)
+                combo_left_tab {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_CTRL &kp LEFT_SHIFT &kp TAB>;
+                        key-positions = <A D>;
+                                };
+                // f + j = Cmd + Shift + V (Clipboard)
+                combo_clipboard {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp V>;
+                        key-positions = <F J>;
+                                };
+                // k + ; = Ctrl + Tab (Switch to Right Tab)
+                combo_right_tab {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_CTRL &kp TAB>;
+                        key-positions = <K SEMI>;
+                                };
+                // s + f = Cmd + Tab (Switch to Left App)
+                combo_left_app {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp TAB>;
+                        key-positions = <S F>;
+                                };
+                // j + l = Cmd + Tab (Switch to Right App)
+                combo_right_app {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp TAB>;
+                        key-positions = <J L>;
+                                };
+                // a + f = Ctrl + Left Arrow (Switch to Left Desktop)
+                combo_left_desktop {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_CTRL &kp LEFT_ARROW>;
+                        key-positions = <A F>;
+                                };
+                // j + ; = Ctrl + Right Arrow (Switch to Right Desktop)
+                combo_right_desktop {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_CTRL &kp RIGHT_ARROW>;
+                        key-positions = <J SEMI>;
+                                };
+                // s + d = Cmd + Shift + 2 (Snipe Text)
+                combo_snipe_text {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp N2>;
+                        key-positions = <S D>;
+                                };
+                // f + g = Cmd + Z (Undo)
+                combo_undo {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp Z>;
+                        key-positions = <F G>;
+                                };
+                // h + j = Cmd + Shift + Z (Redo)
+                combo_redo {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp Z>;
+                        key-positions = <H J>;
+                                };
+                // k + l = Cmd + Shift + 4 (Lasso Screenshot)
+                combo_lasso {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp N4>;
+                        key-positions = <K L>;
+                                };
+                // z + x = Escape
+                combo_escape {
+                        timeout-ms = <200>;
+                        bindings = <&kp ESC>;
+                        key-positions = <Z X>;
+                                };
+                // c + v = Tab
+                combo_tab {
+                        timeout-ms = <200>;
+                        bindings = <&kp TAB>;
+                        key-positions = <C V>;
+                                };
+                // m + , = Delete
+                combo_delete {
+                        timeout-ms = <200>;
+                        bindings = <&kp DELETE>;
+                        key-positions = <M COMMA>;
+                                };
+                // . + / = Caps Lock
+                combo_caps_lock {
+                        timeout-ms = <200>;
+                        bindings = <&kp CAPSLOCK>;
+                        key-positions = <DOT FSLH>;
+                                };
+                // b + n = Cmd + L (Lock Mac)
+                combo_lock_mac {
+                        timeout-ms = <200>;
+                        bindings = <&kp LEFT_GUI &kp L>;
+                        key-positions = <B N>;
+                                };
+                // Alt + Backspace = Word Delete (Deletes one word)
+                combo_alt_backspace {
+                timeout-ms = <200>;  # Set the delay for combos
+                bindings = <&kp LEFT_ALT &kp BACKSPACE>;
+                key-positions = <LEFT_ALT BACKSPACE>;
+                                };
+
+                };
+
+
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
+// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
+//                    | L_DT | DEL_WRD | BKSPC |   | SPC | ENT  | R_DT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
+    &multi_tap_q &multi_tap_w &multi_tap_e &multi_tap_r &multi_tap_t        &multi_tap_y &multi_tap_u &multi_tap_i &multi_tap_o &multi_tap_p
+    &mod_tap_a &mod_tap_s &mod_tap_d &mod_tap_f &kp G         &kp H &mod_tap_j &mod_tap_k &mod_tap_l &mod_tap_semi
+   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
+                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
+                                };
+                layer1 {
+// -----------------------------------------------------------------------------------------
+// |  Add_BM  |  BM_Mgr  |  History  |  DLs  |  Kill_Switch  |   |  Volume Up  |  Home  |  Page Up  |  Page Down  |  End  | 
+// | New_Tab | Back | Forward | Close_Tab | Undo_Close_Tab |   | Mute | Up_Arrow |  Left_Arrow | Right_Arrow | Down_Arrow |
+// | Reload | Zoom_In | Zoom_Out | Zoom_Reset | Full Screen |   | Volume_Down |  Scroll_Up |  Scroll_Left | Scroll_Right | Scroll_Down |
+//                    | L_DT | DEL_WRD | BKSPC |   | SPC | ENT  | R_DT |
+                        bindings = <
+&kp CMD_D    &kp CMD_OPT_B    &kp CMD_Y    &kp CMD_J    &kp OPT_N2    &kp VOL_UP   &kp HOME   &kp PAGE_UP   &kp PAGE_DOWN   &kp END
+&kp CMD_T    &kp CMD_LEFT_BRACKET   &kp CMD_RIGHT_BRACKET   &kp CMD_W   &kp CMD_SHIFT_T    &kp AUDIO_MUTE    &kp UP   &kp LEFT   &kp RIGHT   &kp DOWN
+&kp CMD_R    &kp CMD_PLUS    &kp CMD_MINUS    &kp CMD_0    &kp CTRL_CMD_F    &kp VOL_DOWN    &kp MS_UP    &kp MS_WH_LEFT    &kp MS_WH_RIGHT    &kp MS_DOWN
+                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
+                        >;
+                        };
+
+                layer2 {
+// -----------------------------------------------------------------------------------------
+// |  `  |  ~  |  -  |  _  |  \  |   |  *  |  7  |  8  |  9  |  /  |
+// |  [  |  ]  |  {  |  }  |  |  |   |  +  |  4  |  5  |  6  |  -  |
+// |  '  |  "  |  —  |  –  |  ₹  |   |  %  |  1  |  2  |  3  | = |
+//                    | L_DT | DEL_WRD | BKSPC |   | SPC | ENT  | R_DT |
+                        bindings = <
+&kp GRAVE    &kp TILDE    &kp MINUS    &kp UNDERSCORE    &kp BACKSLASH    &kp ASTERISK    &kp N7    &kp N8    &kp N9    &kp SLASH
+&kp LEFT_BRACKET    &kp RIGHT_BRACKET    &kp LEFT_CURLY_BRACE    &kp RIGHT_CURLY_BRACE    &kp PIPE    &kp PLUS    &kp N4    &kp N5    &kp N6    &kp MINUS
+&kp APOSTROPHE    &kp DOUBLE_QUOTE    &kp EM_DASH    &kp EN_DASH    &paste_rupee    &kp PERCENT    &kp N1    &kp N2    &kp N3    &kp EQUAL
+                  &kp LEFT_CTRL &kp LEFT_ARROW   &combo combo_alt_backspace &kp BACKSPACE &kp SPACE &kp RET &kp RIGHT_CTRL &kp RIGHT_ARROW
+                        >;
+                        };
                 };
-        };
 };
